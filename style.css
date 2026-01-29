@@ -31,3 +31,26 @@ footer {
   text-align: center;
   padding: 15px;
 }
+
+/* Project Section Fix */
+.project {
+  margin: 20px auto;      /* adds space between projects and centers them */
+  padding: 15px;
+  max-width: 600px;       /* keeps project width consistent */
+  background-color: #f9f3e7; /* optional light background for readability */
+  border-radius: 8px;     /* rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* subtle shadow */
+}
+
+/* Ensure links inside projects are inline-block so spacing works */
+.project a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #f2b632;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
