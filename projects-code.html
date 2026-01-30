@@ -22,46 +22,155 @@
   </div>
 </header>
 
-<!-- TECH GADGET STORE -->
 <section id="tech-gadget-store" class="project-code fade-up">
   <div class="container">
     <h2>Tech Gadget Store</h2>
-    <p>HTML, CSS, JS:</p>
-    <pre><code>
-// Your full HTML, CSS, JS code here
+    <p>HTML:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Tech Gadget Store&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Tech Gadget Store&lt;/h1&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;ul id="products"&gt;
+      &lt;li&gt;&lt;span&gt;Smartphone&lt;/span&gt;&lt;button onclick="addToCart('Smartphone')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;Laptop&lt;/span&gt;&lt;button onclick="addToCart('Laptop')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;Wireless Headphones&lt;/span&gt;&lt;button onclick="addToCart('Wireless Headphones')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;Smartwatch&lt;/span&gt;&lt;button onclick="addToCart('Smartwatch')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="cart.html"&gt;Go to Cart&lt;/a&gt;
+  &lt;/main&gt;
+  &lt;script src="store.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
+
+    <p>CSS:</p>
+    <pre><code>body { background:#000; color:#fff; font-family:'Montserrat',sans-serif; }
+ul#products { list-style:none; padding:0; }
+ul#products li { padding:10px; margin-bottom:10px; background:#222; display:flex; justify-content:space-between; border-radius:8px; }
+button { background:#c0c0c0; color:#000; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+button:hover { background:#c0392b; color:#fff; }</code></pre>
+
+    <p>JavaScript:</p>
+    <pre><code>let cart = [];
+function addToCart(item) {
+  cart.push(item);
+  alert(item + ' added to cart!');
+  updateCartCount();
+}
+function updateCartCount() {
+  let countEl = document.getElementById('cart-count');
+  if(countEl) countEl.textContent = cart.length;
+}</code></pre>
   </div>
 </section>
 
-<!-- SUNSHINE ESPRESSO -->
 <section id="sunshine-espresso-demo" class="project-code fade-up">
   <div class="container">
     <h2>Sunshine Espresso Demo</h2>
-    <p>HTML, CSS, JS:</p>
-    <pre><code>
-// Your full HTML, CSS, JS code here
+    <p>HTML:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Sunshine Espresso&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;&lt;h1&gt;Sunshine Espresso&lt;/h1&gt;&lt;/header&gt;
+  &lt;main&gt;
+    &lt;ul id="menu"&gt;
+      &lt;li&gt;Espresso &lt;button onclick="addToCart('Espresso')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;Cappuccino &lt;button onclick="addToCart('Cappuccino')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;Latte &lt;button onclick="addToCart('Latte')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+      &lt;li&gt;Pastry &lt;button onclick="addToCart('Pastry')"&gt;Add to Cart&lt;/button&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="cart.html"&gt;Go to Cart&lt;/a&gt;
+  &lt;/main&gt;
+  &lt;script src="sunshine.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
+
+    <p>CSS:</p>
+    <pre><code>body { background:#000; color:#fff; font-family:'Montserrat',sans-serif; }
+ul#menu { list-style:none; padding:0; }
+ul#menu li { padding:10px; margin-bottom:10px; background:#222; display:flex; justify-content:space-between; border-radius:8px; }
+button { background:#c0c0c0; color:#000; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+button:hover { background:#c0392b; color:#fff; }</code></pre>
+
+    <p>JavaScript:</p>
+    <pre><code>let espressoCart = [];
+function addToCart(item) {
+  espressoCart.push(item);
+  alert(item + ' added!');
+}</code></pre>
   </div>
 </section>
 
-<!-- PASSWORD GENERATOR -->
 <section id="password-generator" class="project-code fade-up">
   <div class="container">
     <h2>Password Generator</h2>
-    <p>HTML & JS:</p>
-    <pre><code>
-// Your full HTML & JS code here
+    <p>HTML:</p>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Password Generator&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;input id="length" type="number" placeholder="Password Length"&gt;
+  &lt;button onclick="generatePassword()"&gt;Generate&lt;/button&gt;
+  &lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+    <p>JavaScript:</p>
+    <pre><code>function generatePassword(){
+  const length = document.getElementById('length').value;
+  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+  let password = "";
+  for(let i=0;i&lt;length;i++){
+    password += charset.charAt(Math.floor(Math.random() * charset.length));
+  }
+  alert(password);
+}
 </code></pre>
   </div>
 </section>
 
-<!-- PYTHON EXPENSE TRACKER -->
 <section id="python-expense-tracker" class="project-code fade-up">
   <div class="container">
     <h2>Python Expense Tracker</h2>
-    <p>Python code:</p>
-    <pre><code>
-# Your full Python code here
+    <p>Python (Streamlit) Code:</p>
+    <pre><code>import streamlit as st
+
+st.title("Expense Tracker")
+if 'expenses' not in st.session_state:
+    st.session_state.expenses = []
+
+with st.form("add_expense"):
+    item = st.text_input("Expense Name")
+    amount = st.number_input("Amount", min_value=0.0, format="%.2f")
+    submit = st.form_submit_button("Add Expense")
+    if submit:
+        st.session_state.expenses.append({"item": item, "amount": amount})
+
+st.subheader("Expenses")
+total = 0
+for expense in st.session_state.expenses:
+    st.write(f"{expense['item']}: ${expense['amount']}")
+    total += expense['amount']
+
+st.subheader(f"Total: ${total}")
 </code></pre>
   </div>
 </section>
@@ -72,6 +181,14 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  // Fade up animation
+  const faders = document.querySelectorAll('.fade-up');
+  const appearOptions = { threshold: 0, rootMargin: "0px 0px -100px 0px" };
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('show'); appearOnScroll.unobserve(entry.target); } });
+  }, appearOptions);
+  faders.forEach(fader => { appearOnScroll.observe(fader); });
+</script>
 </body>
 </html>
