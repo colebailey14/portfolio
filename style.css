@@ -1,21 +1,21 @@
 :root {
-  --primary: #00ffcc;
-  --secondary: #0d1b2a;
-  --bg: #0f3057;
-  --text: #e0e1dd;
-  --card-bg: #1c4966;
-  --btn-bg: #00ffcc;
-  --btn-text: #0d1b2a;
+  --primary:#00ffcc;
+  --secondary:#0d1b2a;
+  --bg:#0f3057;
+  --text:#e0e1dd;
+  --card-bg:#1c4966;
+  --btn-bg:#00ffcc;
+  --btn-text:#0d1b2a;
 }
 
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;background-color:var(--bg);color:var(--text);line-height:1.6;}
+body{font-family:'Montserrat',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;}
 .container{max-width:1100px;margin:auto;padding:2rem;}
 header{background:var(--secondary);padding:1rem 0;position:sticky;top:0;z-index:100;}
-header .container{display:flex;justify-content:space-between;align-items:center;}
+header .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
 header h1{font-family:'Roboto Slab',serif;color:var(--primary);}
-header nav a{color:var(--text);margin-left:1.5rem;text-decoration:none;font-weight:500;transition:0.2s;}
-header nav a:hover{color:#ff00ff;transform:scale(1.1);}
+header nav a{color:var(--text);margin-left:1.5rem;text-decoration:none;font-weight:500;transition:0.3s;}
+header nav a:hover{color:#ff00ff;transform:scale(1.05);}
 
 /* HERO */
 #hero{
@@ -36,7 +36,7 @@ header nav a:hover{color:#ff00ff;transform:scale(1.1);}
   height:100%;
   top:0;left:0;
   background:url('https://images.unsplash.com/photo-1534680938895-9b23a631c929?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-  opacity:0.2;
+  opacity:0.15;
   z-index:0;
 }
 .hero-overlay{
@@ -60,7 +60,7 @@ h2{color:#ff00ff;margin-bottom:1rem;text-shadow:0 0 10px #00ffcc;}
 .skills-list li{background:var(--card-bg);padding:0.5rem 1rem;border-radius:12px;color:var(--skill-color);font-weight:600;transition:all 0.3s;}
 .skills-list li:hover{transform:scale(1.1);text-shadow:0 0 5px #00ffcc;}
 
-.project-card{background:var(--card-bg);padding:2rem;margin-bottom:2rem;border-radius:15px;box-shadow:0 8px 30px rgba(0,0,0,0.5);transition:all 0.3s;position:relative;}
+.project-card{background:var(--card-bg);padding:2rem;margin-bottom:2rem;border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,0.6);transition:all 0.3s;position:relative;}
 .project-card:hover{transform:translateY(-8px);box-shadow:0 12px 40px rgba(0,0,0,0.7);}
 .project-card h3{margin-bottom:0.5rem;color:#ff00ff;}
 .project-card p{margin-bottom:1rem;}
