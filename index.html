@@ -1,180 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Cole Bailey | Web Developer & Software Portfolio</title>
-
-  <meta
-    name="description"
-    content="Portfolio of Cole Bailey featuring live JavaScript and Python projects, responsive websites, and clean, modern web development."
-  />
-  <meta name="keywords" content="Web Developer, JavaScript, Python, Portfolio, Frontend Developer, Software Projects" />
-  <meta name="author" content="Cole Bailey" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Cole Bailey | Web Developer Portfolio" />
-  <meta property="og:description" content="Explore live web applications, clean UI design, and modern JavaScript projects." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://colebailey14.github.io/" />
-
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cole Bailey - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <!-- NAV -->
-  <header class="navbar">
-    <div class="logo">Cole Bailey</div>
+<header>
+  <div class="container header-container">
+    <h1>Cole Bailey</h1>
     <nav>
-      <a href="#about">About</a>
+      <a href="#about">About Me</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Web Developer</h1>
-    <p>
-      Building clean, responsive, and user-focused web applications using modern
-      JavaScript and Python.
-    </p>
-  </section>
-
-  <!-- METRICS -->
-  <section class="metrics">
-    <div class="metric">
-      <h3>3+</h3>
-      <p>Live Projects Deployed</p>
-    </div>
-    <div class="metric">
-      <h3>100%</h3>
-      <p>Responsive Design</p>
-    </div>
-    <div class="metric">
-      <h3>Fast</h3>
-      <p>Client-Side Performance</p>
-    </div>
-    <div class="metric">
-      <h3>ES6+</h3>
-      <p>Modern JavaScript</p>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
+<section id="about">
+  <div class="container">
     <h2>About Me</h2>
-    <p>
-      I’m a web developer focused on building practical, well-structured applications
-      that prioritize usability, performance, and clean design. I enjoy taking ideas
-      from concept to deployment, turning requirements into working solutions that feel
-      intuitive and polished.
-    </p>
-    <p>
-      My projects emphasize modern frontend practices, responsive layouts, and
-      maintainable code. I’m particularly interested in creating tools and applications
-      that solve real problems, streamline workflows, and provide a strong user
-      experience across devices.
-    </p>
-    <p>
-      I value clarity, consistency, and continuous improvement — both in code and in
-      design — and I approach each project with a focus on quality and long-term
-      usability.
-    </p>
-  </section>
+    <p>I am a driven professional with a background in military service, law enforcement, and security, now thriving in programming and technology projects. I focus on creating polished, fully functional applications and websites that impress and provide real value. Passionate about coding, automation, and e-commerce solutions.</p>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
+<section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>Python</li>
+      <li>JavaScript</li>
+      <li>HTML & CSS</li>
+      <li>Web Development</li>
+      <li>Streamlit / Python Web Apps</li>
+      <li>Git & GitHub</li>
+      <li>Project Management</li>
+      <li>Problem Solving & Automation</li>
+    </ul>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
     <h2>Projects</h2>
 
-    <div class="project">
+    <!-- Tech Gadget Store -->
+    <div class="project-card">
+      <h3>Tech Gadget Store</h3>
+      <p>A fully functional e-commerce store demonstrating responsive design, cart functionality, and polished UX/UI.</p>
+      <div class="project-links">
+        <a href="https://YOUR-GITHUB-USERNAME.github.io/mini-ecommerce-demo/" target="_blank" class="btn">Live Demo</a>
+        <a href="projects-code.html#tech-gadget-store" target="_blank" class="btn">View Code</a>
+      </div>
+    </div>
+
+    <!-- Sunshine Espresso -->
+    <div class="project-card">
+      <h3>Sunshine Espresso Demo</h3>
+      <p>A modernized coffee shop website featuring products, ordering demo, and clean responsive design.</p>
+      <div class="project-links">
+        <a href="https://colebailey14.github.io/sunshine-espresso-demo/index.html" target="_blank" class="btn">Live Demo</a>
+        <a href="projects-code.html#sunshine-espresso-demo" target="_blank" class="btn">View Code</a>
+      </div>
+    </div>
+
+    <!-- Password Generator -->
+    <div class="project-card">
+      <h3>Password Generator</h3>
+      <p>A JavaScript-based tool that generates secure, random passwords instantly.</p>
+      <div class="project-links">
+        <a href="https://colebailey14.github.io/js-password-generator/" target="_blank" class="btn">Live Demo</a>
+        <a href="projects-code.html#password-generator" target="_blank" class="btn">View Code</a>
+      </div>
+    </div>
+
+    <!-- Python Expense Tracker -->
+    <div class="project-card">
       <h3>Python Expense Tracker</h3>
-      <p>
-        A live web application for tracking expenses with real-time calculations and
-        visual feedback. Built with Python and deployed for instant access with no
-        installation required.
-      </p>
-      <p class="impact">
-        <strong>Impact:</strong> Enables users to monitor spending patterns and totals
-        instantly through a simple, accessible interface.
-      </p>
-      <a href="https://python-expense-tracker.streamlit.app/" target="_blank">View Live</a>
+      <p>A Streamlit app that tracks expenses, calculates totals, and displays data dynamically.</p>
+      <div class="project-links">
+        <a href="https://python-expense-tracker.streamlit.app/" target="_blank" class="btn">Live Demo</a>
+        <a href="projects-code.html#python-expense-tracker" target="_blank" class="btn">View Code</a>
+      </div>
     </div>
 
-    <div class="project">
-      <h3>JavaScript Password Generator</h3>
-      <p>
-        A client-side password generator that creates secure, randomized passwords based
-        on user-selected criteria using modern JavaScript.
-      </p>
-      <p class="impact">
-        <strong>Impact:</strong> Improves user security by generating strong passwords
-        instantly without external dependencies.
-      </p>
-      <a href="https://colebailey14.github.io/js-password-generator/" target="_blank">
-        View Live
-      </a>
-    </div>
-
-    <div class="project">
-      <h3>Sunshine Espresso Demo Website</h3>
-      <p>
-        A responsive café website demo showcasing clean UI, modern layout, and a
-        professional brand aesthetic. Designed to reflect real-world business needs.
-      </p>
-      <p class="impact">
-        <strong>Impact:</strong> Demonstrates responsive design, structured layout, and
-        modern frontend styling for small business websites.
-      </p>
-      <a
-        href="https://colebailey14.github.io/sunshine-espresso-demo/index.html"
-        target="_blank"
-      >
-        View Live
-      </a>
-    </div>
-
-    <!-- Tech Gadget Store Project -->
-<div class="project">
-  <h3>Tech Gadget Store</h3>
-  <p>A fully functional mini e-commerce store demonstrating responsive design, cart functionality, and polished UX/UI.</p>
-  <div class="project-links">
-    <a href="https://colebailey14.github.io/mini-ecommerce-demo/" target="_blank" class="btn">Live Demo</a>
-    <a href="https://github.com/colebailey14/mini-ecommerce-demo" target="_blank" class="btn">View Code</a>
   </div>
-</div>
-  </section>
+</section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>JavaScript (ES6+)</li>
-      <li>HTML5 & CSS3</li>
-      <li>Responsive Web Design</li>
-      <li>Website Development</li>
-      <li>Python</li>
-      <li>Git & GitHub</li>
-      <li>UI / UX Fundamentals</li>
-      <li>Client-Side Performance Optimization</li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
+<section id="contact">
+  <div class="container">
     <h2>Contact</h2>
-    <p>
-      Interested in working together or learning more about my projects?
-    </p>
-    <a href="mailto:your-email@example.com" class="contact-btn">Get in Touch</a>
-  </section>
+    <p>You can reach me via <a href="mailto:colebailey@example.com">email</a> for inquiries, freelance opportunities, or collaborations.</p>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 Cole Bailey</p>
-  </footer>
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Cole Bailey. All rights reserved.</p>
+  </div>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
