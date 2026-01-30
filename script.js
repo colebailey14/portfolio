@@ -6,15 +6,15 @@ document.querySelectorAll('header nav a').forEach(anchor=>{
     });
 });
 
-// Fade-in on scroll
-const faders = document.querySelectorAll('.fade-in');
-const options = { threshold: 0.2 };
+// Fade-up sections on scroll
+const faders = document.querySelectorAll('.fade-up');
+const appearOptions = { threshold: 0.2 };
 const appearOnScroll = new IntersectionObserver(function(entries, observer){
   entries.forEach(entry=>{
     if(entry.isIntersecting){
-      entry.target.style.animation = "fadeIn 1s forwards";
+      entry.target.classList.add('show');
       observer.unobserve(entry.target);
     }
   });
-}, options);
-faders.forEach(fader=>{appearOnScroll.observe(fader)});
+}, appearOptions);
+faders.forEach(fader => { appearOnScroll.observe(fader); });
